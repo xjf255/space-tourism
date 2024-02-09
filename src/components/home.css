@@ -1,0 +1,31 @@
+.text {
+    width: 30%;
+}
+
+
+.text > span {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.text strong {
+    font-size: 10rem;
+}
+
+p {
+    text-align: justify;
+    letter-spacing: -1px;
+}
+
+.sources {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
