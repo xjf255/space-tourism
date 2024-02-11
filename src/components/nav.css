@@ -16,19 +16,29 @@ ul{
     display:flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
     width: 50%;
     list-style: none;
     background-color: #ffffff10;
     backdrop-filter: blur(8px);
-    padding: 2rem;
     letter-spacing: 2px;
 }
 li{
+    padding: 2rem;
     display: flex;
-    position: relative;
     gap: 10px;
+    position: relative;
     cursor: pointer;
+}
+.li--active{
+    cursor: default;
+}
+li:hover::after,
+.li--active::after{
+    content: '';
+    width: 80%;
+    border-top: 3px solid white;
+    position: absolute;
+    bottom: 0;
 }
 span{
     font-weight: bold;

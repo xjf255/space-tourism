@@ -9,6 +9,7 @@
 }
 
 .text strong {
+    color: #fff;
     font-size: 10rem;
 }
 
@@ -18,8 +19,8 @@ p {
 }
 
 .sources {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
