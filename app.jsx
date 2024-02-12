@@ -12,10 +12,8 @@ function App () {
   return (
     <main>
       <Nav />
-      <section className='body'>
-        {position === 'home' && <Home />}
-        {position !== 'home' && <Body />}
-      </section>
+      {position === 'home' && <Home />}
+      {position !== 'home' && <Body />}
     </main>
   )
 }

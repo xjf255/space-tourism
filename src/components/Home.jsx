@@ -2,7 +2,7 @@ import './home.css'
 
 export function Home () {
   return (
-    <>
+    <section className='body'>
       <section className='text'>
         <span>So, you want to travel to <strong>SPACE</strong></span>
         <p> Let’s face it; if you want to go to space, you might as well genuinely go to
@@ -12,6 +12,6 @@ export function Home () {
       </section>
 
       <div className='sources'>Explorer</div>
-    </>
+    </section>
   )
 }

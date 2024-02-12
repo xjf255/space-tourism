@@ -2,31 +2,30 @@ import { useState } from 'react'
 import useNav from '../hocks/useNav'
 import data from '../mocks/data.json'
 
-export function Body ({ distance, travel }) {
+export function Body () {
   const { position } = useNav()
-  const [innerPosition, setInnerPosition] = useState(1)
+  const [innerPosition, setInnerPosition] = useState(0)
   const information = data[position][innerPosition]
-  console.log(information)
+  const img = information.images.webp || information.images.landscape
+
   return (
-    <>
-      <h2>Title</h2>
+    <section className={position}>
+      <h2>{information.name}</h2>
       <section className='info'>
         <figure>
-          <img src='' alt='Aqui va algo' />
+          <img src={img} alt='Aqui va algo' />
         </figure>
         <div>
-          nav
-          <h3>Subtitulo</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Blanditiis adipisci molestias quam unde autem necessitatibus
-          ipsam expedita suscipit nobis laborum. Perspiciatis, expedita
-          minima? Magnam eveniet id facere mollitia numquam magni.
+          <button onClick={() => { setInnerPosition(innerPosition + 1) }}>+</button>
+          {position === 'destination' && <h3><span>01</span> Pick your destination</h3>}
+          {position === 'crew' && <h3><span>02</span> Meet your crew</h3>}
+          {position === 'technology' && <h3><span>03</span> Space Launch 101</h3>}
+          {information.description || information.bio}
         </div>
         <hr />
-        {
-                    distance & travel && <>Hola</>
-                }
+        {information.distance && <h1>{information.distance}</h1>}
+        {information.travel && <h1>{information.travel}</h1>}
       </section>
-    </>
+    </section>
   )
 }
