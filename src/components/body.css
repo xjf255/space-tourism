@@ -43,7 +43,7 @@ section>.info {
 }
 
 .images>img {
-    width: 400px;
+    width: 80%;
     height: 100%;
     object-fit: cover;
 }
@@ -67,30 +67,12 @@ section>.info {
     /* text-wrap: balance; */
 }
 
-.another-info {
-    display: flex;
-}
-
 footer {
     display: flex;
     gap: 20px;
     justify-content: space-around;
 }
 
-.information__travel {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.information__travel>span {
-    color: var(--text);
-    font-size: 14px;
-}
-.information__travel > p{
-    font-size: 1.6rem;
-    margin: 0;
-    text-transform: uppercase;
-}
 .technology .text,
 .crew .text {
     padding: 0;

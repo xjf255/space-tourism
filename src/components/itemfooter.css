@@ -1,0 +1,18 @@
+.information__travel {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.information__travel>span {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.information__travel>p {
+    font-size: 1.6rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+.another-info {
+    display: flex;
+}
