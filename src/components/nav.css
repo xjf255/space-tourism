@@ -1,4 +1,4 @@
-nav{
+.nav__header{
     display: flex;
     align-items: center;
     justify-content: start;
@@ -12,7 +12,7 @@ img{
 figure{
     width: 40%;
 }
-ul{
+.nav__header ul{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -32,14 +32,17 @@ li{
 .li--active{
     cursor: default;
 }
-li:hover::after,
-.li--active::after{
+.nav__header li:hover::after,
+.li--active::after,
+.destination li:hover::after,
+.destination .li--active::after{
     content: '';
     width: 80%;
     border-top: 3px solid white;
     position: absolute;
     bottom: 0;
 }
+
 span{
     font-weight: bold;
 }
