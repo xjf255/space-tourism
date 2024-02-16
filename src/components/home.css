@@ -46,3 +46,8 @@ p {
         margin-top: 100px;
     }
 }
+@media (width < 768px) {
+    .text strong{
+        font-size: 5rem;
+    }
+}

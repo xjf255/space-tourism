@@ -47,9 +47,11 @@ section>.info {
     height: 100%;
     object-fit: cover;
 }
-.role{
+
+.role {
     color: var(--role);
 }
+
 .info>.text {
     width: 40%;
     padding: 0 130px;
@@ -79,7 +81,7 @@ footer {
     width: auto;
 }
 
-.technology .role{
+.technology .role {
     font-size: 14px;
     color: var(--text);
 }
@@ -88,7 +90,8 @@ footer {
 .crew hr {
     display: none;
 }
-.crew ul{
+
+.crew ul {
     position: absolute;
     bottom: 20px;
 }
@@ -105,64 +108,80 @@ footer {
     width: 100%;
     object-fit: contain;
 }
+
 .technology h2,
 .crew h2 {
     font-size: 4rem;
 }
-.technology .text > p,
-.crew .text > p{
+
+.technology .text>p,
+.crew .text>p {
     width: 60%;
 }
-.nav__body ul{
+
+.nav__body ul {
     display: flex;
     gap: 20px;
     padding: 0;
 }
-.nav__body ul li{
+
+.nav__body ul li {
     padding: 8px;
 }
-.destination .li__index{
+
+.destination .li__index {
     display: none;
 }
-.technology .li__name{
+
+.technology .li__name {
     display: none;
 }
+
 .crew .li__name,
-.crew .li__index{
+.crew .li__index {
     display: none;
 }
-.crew li{
+
+.crew li {
     gap: 20px;
     border-radius: 50%;
     background-color: var(--role);
 }
-.technology li{
+
+.technology li {
     padding: 0 !important;
 }
-.li--active::after{
-    content: none;
-}
-.crew .info{
+
+.crew .info {
     position: relative;
 }
-.crew .li--active{
+
+.crew .li--active {
     background-color: var(--white);
 }
-.technology .text{
+
+.crew li.li--active::after,
+.technology li.li--active::after {
+    content: none;
+}
+
+.technology .text {
     position: relative;
     padding-left: 150px;
 }
 
-.technology ul{
+.technology ul {
     position: absolute;
     left: 0;
     margin: 0;
     flex-direction: column;
 }
-.technology .li__index{
+
+.technology .li__index {
     padding: 0;
 }
-.technology .li__index{
+
+.technology .li__index {
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -173,10 +192,65 @@ footer {
     border: .5px solid var(--text);
     overflow: hidden;
 }
-.technology .li--active > .li__index{
+
+.technology .li--active>.li__index {
     background-color: var(--white);
     color: #000;
 }
-.technology .info{
+
+.technology .info {
     gap: 40px;
+}
+
+@media (width < 1240px) {
+
+    .crew,
+    .destination,
+    .technology {
+        margin: 200px 0 0 0;
+        text-align: center;
+    }
+
+    .destination .info,
+    .crew .info,
+    .technology .info {
+        flex-direction: column;
+    }
+
+    .info .text {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crew ul {
+        left: 50px;
+    }
+
+    .technology .text {
+        padding: 0;
+    }
+
+    .technology ul {
+        flex-direction: row;
+        padding-bottom: 20px;
+        position: static;
+    }
+}
+
+@media (width < 768px) {
+
+    .crew,
+    .destination,
+    .technology {
+        margin: 0;
+        padding: 20px;
+    }
+    .images>img{
+        width: 100%;
+    }
+    .info > .text{
+        padding: 0;
+    }
 }
