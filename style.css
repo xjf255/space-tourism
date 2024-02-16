@@ -31,5 +31,14 @@ body {
 p{
   text-transform: lowercase;
 }
+@media (width < 1240px) {
+  .body{
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    text-align: center;
+  }
+}
 
 

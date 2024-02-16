@@ -2,25 +2,24 @@ import { itemNav } from '../const/const'
 import useNav from '../hocks/useNav'
 import './nav.css'
 
-export function Nav ({ logo = true, items, change }) {
+export function Nav () {
   const { position, setPosition } = useNav()
-  const list = items || itemNav
 
   return (
     <nav className='nav__header'>
-      {logo && <figure>
+      <figure>
         <img src='assets/shared/logo.svg' alt='logo' />
-      </figure>}
+      </figure>
       <ul>
         {
-          list.map((title, index) => {
+          itemNav.map((title, index) => {
             return (
               <li
                 key={title}
                 className={title === position ? 'li--active' : null}
                 onClick={() => { setPosition(title) }}
               >
-                <span>0{index}</span>
+                <span className='nav__header--index'>0{index}</span>
                 {title}
               </li>
             )

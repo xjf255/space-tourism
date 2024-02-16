@@ -5,12 +5,17 @@ import imgBackground from '../mocks/backgroundImages.json'
 export function useImageBg () {
   const { position } = useNav()
   const [response, setResponse] = useState('desktop')
-  useEffect(() => {
-    const $width = window.outerWidth
+  let $width = window.outerWidth
 
-    if ($width < 768) return setResponse('mobile')
-    if ($width < 1240) return setResponse('tablet')
-    if ($width >= 1240) return setResponse('desktop')
-  }, [])
+  useEffect(() => {
+    window.addEventListener('resize', (event) => {
+      $width = event.target.outerWidth
+    })
+
+    if ($width <= 768) setResponse('mobile')
+    if ($width > 768 && $width < 1240) setResponse('tablet')
+    if ($width >= 1240) setResponse('desktop')
+  })
+
   return imgBackground[response][position]
 }
