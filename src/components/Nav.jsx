@@ -13,7 +13,7 @@ export function Nav () {
   return (
     <nav className='nav__header'>
       <figure>
-        <img src='assets/shared/logo.svg' alt='logo' />
+        <img src='/src/assets/shared/logo.svg' alt='logo' />
       </figure>
       <ul className='nav--desktop'>
         {
